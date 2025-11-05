@@ -53,12 +53,12 @@ export default function Contact() {
           <div className="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200">
             <h3 className="text-lg font-semibold text-slate-900">Dove siamo</h3>
             <p className="mt-2 text-sm text-slate-600">
-              Operiamo in tutta Italia con sede a Milano. Disponibili per meeting in presenza e remoto.
+              Sede legale: Via Francesco Nullo 2, 24124 Bergamo (BG). Operiamo in tutta Italia, meeting in presenza e da remoto.
             </p>
             <div className="mt-6 overflow-hidden rounded-xl">
               <iframe
-                title="Mappa"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.919260808011!2d9.1900!3d45.4642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDUuNDY0MiBOLCA5LjE5MDAgRQ!5e0!3m2!1sit!2sit!4v1700000000000"
+                title="Mappa - Via Francesco Nullo 2, Bergamo"
+                src="https://www.google.com/maps?q=Via%20Francesco%20Nullo%202,%20Bergamo&output=embed"
                 width="100%"
                 height="260"
                 style={{ border: 0 }}
@@ -68,8 +68,8 @@ export default function Contact() {
               />
             </div>
             <ul className="mt-6 space-y-2 text-sm text-slate-600">
-              <li><span className="font-medium text-slate-800">Email:</span> info@tuaazienda.it</li>
-              <li><span className="font-medium text-slate-800">Telefono:</span> +39 02 0000 0000</li>
+              <li><span className="font-medium text-slate-800">Ragione sociale:</span> COMPLIS SRL</li>
+              <li><span className="font-medium text-slate-800">Indirizzo:</span> Via Francesco Nullo 2, 24124 Bergamo (BG)</li>
             </ul>
           </div>
         </div>
