@@ -1,76 +1,65 @@
 import React, { useState } from 'react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
-  const [status, setStatus] = useState('');
+  const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    setStatus('Grazie! Ti contatteremo al più presto.');
-    e.currentTarget.reset();
+    setSent(true);
   };
 
   return (
-    <section id="contact" className="bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Contatti</h2>
-          <p className="mt-4 text-base text-slate-600 md:text-lg">
-            Richiedi una consulenza personalizzata. Siamo a tua disposizione per valutare esigenze e priorità.
-          </p>
+    <section id="contact" className="w-full bg-slate-950 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Contatti</h2>
+          <p className="mt-4 text-slate-200">Parliamo delle tue esigenze: rispondiamo rapidamente e in modo concreto.</p>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <form onSubmit={handleSubmit} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <form onSubmit={onSubmit} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="sm:col-span-1">
-                <label className="mb-1 block text-sm font-medium text-slate-700">Nome e Cognome</label>
-                <input required type="text" className="w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200" placeholder="Mario Rossi" />
+              <div>
+                <label className="mb-1 block text-sm text-slate-200">Nome e Cognome</label>
+                <input required type="text" className="w-full rounded-md border border-white/10 bg-slate-900/60 px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-sky-500" placeholder="Mario Rossi" />
               </div>
-              <div className="sm:col-span-1">
-                <label className="mb-1 block text-sm font-medium text-slate-700">Email</label>
-                <input required type="email" className="w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200" placeholder="mario@azienda.it" />
+              <div>
+                <label className="mb-1 block text-sm text-slate-2 00">Email</label>
+                <input required type="email" className="w-full rounded-md border border-white/10 bg-slate-900/60 px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-sky-500" placeholder="nome@azienda.it" />
               </div>
-              <div className="sm:col-span-2">
-                <label className="mb-1 block text-sm font-medium text-slate-700">Azienda</label>
-                <input type="text" className="w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200" placeholder="Nome azienda" />
-              </div>
-              <div className="sm:col-span-2">
-                <label className="mb-1 block text-sm font-medium text-slate-700">Messaggio</label>
-                <textarea required rows="4" className="w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-200" placeholder="Raccontaci le tue esigenze (GDPR, 231, whistleblowing, audit, cybersecurity, formazione, ecc.)" />
-              </div>
-              <div className="sm:col-span-2 flex items-center justify-between">
-                <div className="text-xs text-slate-500">Compilando il form accetti la nostra informativa privacy.</div>
-                <button type="submit" className="inline-flex items-center rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-300">
-                  Richiedi una consulenza
-                </button>
-              </div>
-              {status && (
-                <div className="sm:col-span-2 rounded-md bg-green-50 p-3 text-sm text-green-700 ring-1 ring-green-200">{status}</div>
-              )}
             </div>
+            <div className="mt-4">
+              <label className="mb-1 block text-sm text-slate-200">Messaggio</label>
+              <textarea required rows={4} className="w-full rounded-md border border-white/10 bg-slate-900/60 px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-sky-500" placeholder="Raccontaci il tuo progetto..." />
+            </div>
+            <button type="submit" className="mt-6 inline-flex items-center justify-center rounded-md bg-gradient-to-r from-sky-500 to-indigo-600 px-5 py-3 text-white shadow-lg shadow-indigo-600/30 transition hover:opacity-95">
+              Invia richiesta
+            </button>
+            {sent && (
+              <p className="mt-3 text-sm text-emerald-300">Grazie! Ti ricontatteremo a breve.</p>
+            )}
           </form>
 
-          <div className="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Dove siamo</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Sede legale: Via Francesco Nullo 2, 24124 Bergamo (BG). Operiamo in tutta Italia, meeting in presenza e da remoto.
-            </p>
-            <div className="mt-6 overflow-hidden rounded-xl">
+          <div className="space-y-6">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <h3 className="text-lg font-medium">COMPLIS SRL</h3>
+              <div className="mt-4 space-y-2 text-slate-200">
+                <p className="flex items-center gap-2"><MapPin className="h-5 w-5 text-sky-400" /> Via Francesco Nullo, 2 — 24121 Bergamo BG</p>
+                <p className="flex items-center gap-2"><Mail className="h-5 w-5 text-sky-400" /> info@complis.it</p>
+                <p className="flex items-center gap-2"><Phone className="h-5 w-5 text-sky-400" /> +39 035 000 0000</p>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-xl border border-white/10">
               <iframe
-                title="Mappa - Via Francesco Nullo 2, Bergamo"
+                title="Mappa COMPLIS SRL"
                 src="https://www.google.com/maps?q=Via%20Francesco%20Nullo%202,%20Bergamo&output=embed"
-                width="100%"
-                height="260"
-                style={{ border: 0 }}
-                allowFullScreen=""
+                className="h-72 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            <ul className="mt-6 space-y-2 text-sm text-slate-600">
-              <li><span className="font-medium text-slate-800">Ragione sociale:</span> COMPLIS SRL</li>
-              <li><span className="font-medium text-slate-800">Indirizzo:</span> Via Francesco Nullo 2, 24124 Bergamo (BG)</li>
-            </ul>
           </div>
         </div>
       </div>
