@@ -48,7 +48,7 @@ function App() {
       <footer className="border-t border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-slate-300 sm:flex-row">
           <p>© {new Date().getFullYear()} COMPLIS SRL. Tutti i diritti riservati.</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <a href="#about" className="hover:text-white">Chi siamo</a>
             <a href="#services" className="hover:text-white">Servizi</a>
             <a href="#team" className="hover:text-white">Team</a>

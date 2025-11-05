@@ -4,14 +4,12 @@ const people = [
   {
     name: 'Avv. Serena Belingheri',
     role: 'Socio • Privacy & Compliance',
-    // Professional female portrait
     image:
       'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop',
   },
   {
     name: 'Avv. Irene Manfè',
     role: 'Socio • Governance & Compliance',
-    // Replaced with a female portrait as requested
     image:
       'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
   },
