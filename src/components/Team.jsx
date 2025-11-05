@@ -2,19 +2,14 @@ import React from 'react';
 
 const members = [
   {
-    name: 'Avv. Laura Bianchi',
-    role: 'Partner • Privacy & GDPR',
+    name: 'Avv. Serena Belingheri',
+    role: 'Socio • Privacy & Compliance',
     img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop',
   },
   {
-    name: 'Dott.ssa Marta Conti',
-    role: 'Partner • Compliance 231 & OdV',
+    name: 'Avv. Irene Manfè',
+    role: 'Socio • Governance & Compliance',
     img: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    name: 'Ing. Federica Leone',
-    role: 'Head of Cybersecurity',
-    img: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop',
   },
 ];
 
@@ -25,12 +20,12 @@ export default function Team() {
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Il nostro Team</h2>
           <p className="mt-4 text-base text-slate-600 md:text-lg">
-            Una boutique di consulenza guidata da donne, con un approccio umano e tecnologia avanzata per ispirare
-            fiducia, ascolto e risultati concreti.
+            Una boutique di consulenza guidata da donne. Le socie fondatrici guidano i progetti con rigore legale,
+            ascolto e concretezza, affiancando imprese e PA in materia di compliance, privacy e governance.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {members.map((m) => (
             <article key={m.name} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
               <div className="relative h-64 w-full overflow-hidden">
