@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
 import Team from './components/Team';
 import Contact from './components/Contact';
 
@@ -21,6 +22,7 @@ function App() {
           <nav className="hidden items-center gap-6 text-sm text-slate-200 sm:flex">
             <a href="#home" className="hover:text-white">Home</a>
             <a href="#about" className="hover:text-white">Chi siamo</a>
+            <a href="#services" className="hover:text-white">Servizi</a>
             <a href="#team" className="hover:text-white">Team</a>
             <a href="#contact" className="hover:text-white">Contatti</a>
           </nav>
@@ -37,6 +39,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Services />
         <Team />
         <Contact />
       </main>
@@ -47,6 +50,7 @@ function App() {
           <p>© {new Date().getFullYear()} COMPLIS SRL. Tutti i diritti riservati.</p>
           <div className="flex gap-4">
             <a href="#about" className="hover:text-white">Chi siamo</a>
+            <a href="#services" className="hover:text-white">Servizi</a>
             <a href="#team" className="hover:text-white">Team</a>
             <a href="#contact" className="hover:text-white">Contatti</a>
             <a href="#" className="hover:text-white">Privacy Policy</a>

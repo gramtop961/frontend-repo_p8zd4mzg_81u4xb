@@ -25,7 +25,7 @@ export default function Contact() {
                 <input required type="text" className="w-full rounded-md border border-white/10 bg-slate-900/60 px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-sky-500" placeholder="Mario Rossi" />
               </div>
               <div>
-                <label className="mb-1 block text-sm text-slate-2 00">Email</label>
+                <label className="mb-1 block text-sm text-slate-200">Email</label>
                 <input required type="email" className="w-full rounded-md border border-white/10 bg-slate-900/60 px-3 py-2 text-white placeholder-slate-400 outline-none focus:border-sky-500" placeholder="nome@azienda.it" />
               </div>
             </div>
